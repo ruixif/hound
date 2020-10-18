@@ -1,10 +1,10 @@
-FROM alpine
+FROM alpine:3.10
 
 ENV GOPATH /go
 
 COPY . /go/src/github.com/hound-search/hound
 
-COPY default-config.json /data/config.json
+# COPY default-config.json /data/config.json
 
 RUN apk update \
 	&& apk add go git subversion libc-dev mercurial bzr openssh \
